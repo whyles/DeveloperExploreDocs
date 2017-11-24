@@ -1,6 +1,6 @@
 # Intent
 
-## Intent介绍
+## 一：Intent介绍
 
 Intent是Android应用组件之间通信的消息对象，它通常表明了两个通信组件的身份以及通信的内容。它最基础的3个用法如下：
 
@@ -21,7 +21,7 @@ Intent是Android应用组件之间通信的消息对象，它通常表明了两�
 
   Broadcast是任何应用可以接收的消息。系统为系统事件提供各种Broadcast，例如系统启动或设备开始充电时。可以通过`sendBroadcast(Intent intent)或sendOrderedBroadcast(Intent intent)`向其他应用发送Broadcast。
 
-## Intent对象
+## 二：Intent对象
 
 Intent 对象携带了 Android 系统用来确定要启动哪个组件的信息（例如，准确的组件名称或应当接收该 Intent 的组件类别），以及收件人组件为了正确执行操作而使用的信息等（例如，要采取的操作以及要处理的数据）。
 
@@ -97,7 +97,7 @@ Intent 对象携带了 Android 系统用来确定要启动哪个组件的信息�
 
   在 Intent 类中定义的、充当 Intent 元数据的标志。 标志可以指示 Android 系统如何启动 Activity（例如，Activity 应属于哪个任务），以及启动之后如何处理（例如，它是否属于最近的 Activity 列表）。
 
-## Intent类型
+## 三：Intent类型
 
 
 ### Explicit intents（明确的意图；显式意图）
@@ -170,7 +170,7 @@ Intent 对象携带了 Android 系统用来确定要启动哪个组件的信息�
 	}
 
 
-## Intent 匹配
+## 四：Intent 匹配
 
 ### Intent Filters 声明
 
@@ -342,7 +342,11 @@ Intent Filters是意图过滤器，可以通过在清单文件中使用 <intent-
 
 您的应用可以采用类似的方式使用 Intent 匹配。PackageManager 提供了一整套 query...() 方法来返回所有能够接受特定 Intent 的组件。此外，它还提供了一系列类似的 resolve...() 方法来确定响应 Intent 的最佳组件。 例如，queryIntentActivities() 将返回能够执行那些作为参数传递的 Intent 的所有 Activity 列表，而 queryIntentServices() 则可返回类似的服务列表。这两种方法均不会激活组件，而只是列出能够响应的组件。 对于广播接收器，有一种类似的方法： queryBroadcastReceivers()。
 
-## PendingIntent
+## 五：PendingIntent
+
+## 六：通用Intent
+
+附录：Github源码
 
 
 
